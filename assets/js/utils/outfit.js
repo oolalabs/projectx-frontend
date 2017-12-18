@@ -120,7 +120,7 @@
         $(".taggd__popup").css("display", "none");
         $(popup_idx).css("display", "");
       });
-    }, 2000);
+    }, 10000);
 
     
 

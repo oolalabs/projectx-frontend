@@ -103,7 +103,7 @@
     const taggd = new Taggd(image, options, tags);
 
     setInterval(function(){
-      $(".taggd__button").unbind().click(function(){
+      $(".taggd__button").unbind().on('click touchstart', function () {
         var idx = "#" + $(this).val();
         $(".apparel").removeClass("list-group-item-primary");
         $(idx).addClass("list-group-item-primary");
@@ -113,7 +113,7 @@
         // alert(idx);
       });
 
-      $(".apparel").unbind().click(function(){
+      $(".apparel").unbind().on('click touchstart', function () {
         $(".apparel").removeClass("list-group-item-primary");
         $(this).addClass("list-group-item-primary");
         var popup_idx = "#popup_" + $(this).attr("id");

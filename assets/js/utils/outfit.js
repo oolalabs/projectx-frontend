@@ -102,7 +102,7 @@
 
     const taggd = new Taggd(image, options, tags);
 
-    setTimeout(function(){
+    setInterval(function(){
       $(".taggd__button").unbind().click(function(){
         var idx = "#" + $(this).val();
         $(".apparel").removeClass("list-group-item-primary");
@@ -120,7 +120,7 @@
         $(".taggd__popup").css("display", "none");
         $(popup_idx).css("display", "");
       });
-    }, 10000);
+    }, 3000);
 
     
 

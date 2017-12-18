@@ -47,6 +47,9 @@
               "text": "Top",
               "buttonAttributes": {
                 "value": "top_01"
+              },
+              "popupAttributes": {
+                "id": "popup_top_01"
               }
             }),
             
@@ -58,7 +61,11 @@
               "text": "Skirt",
               "buttonAttributes": {
                 "value": "skirt_01"
+              },
+              "popupAttributes": {
+                "id": "popup_skirt_01"
               }
+
             }),
             
             Taggd.Tag.createFromObject({
@@ -69,7 +76,11 @@
               "text": "Bag",
               "buttonAttributes": {
                 "value": "bag_01"
+              },
+              "popupAttributes": {
+                "id": "popup_bag_01"
               }
+
             }),
             
             Taggd.Tag.createFromObject({
@@ -80,18 +91,33 @@
               "text": "Scarf",
               "buttonAttributes": {
                 "value": "scarf_01"
+              },
+              "popupAttributes": {
+                "id": "popup_scarf_01"
               }
+
             }),
             
           ];
 
     const taggd = new Taggd(image, options, tags);
 
-    $(".taggd__button").click(function(){
+    $(".taggd__button").unbind().click(function(){
       var idx = "#" + $(this).val();
       $(".apparel").removeClass("list-group-item-primary");
       $(idx).addClass("list-group-item-primary");
+      var popup_idx = "#popup_" + $(this).val();
+      $(".taggd__popup").css("display", "none");
+      $(popup_idx).css("display", "");
       // alert(idx);
+    });
+
+    $(".apparel").unbind().click(function(){
+      $(".apparel").removeClass("list-group-item-primary");
+      $(this).addClass("list-group-item-primary");
+      var popup_idx = "#popup_" + $(this).attr("id");
+      $(".taggd__popup").css("display", "none");
+      $(popup_idx).css("display", "");
     });
 
   });

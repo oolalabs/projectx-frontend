@@ -44,12 +44,13 @@
                 "x": 0.54102,
                 "y": 0.34268
               },
-              "text": "Top",
+              "text": "Casual Long Sleeve Top",
               "buttonAttributes": {
                 "value": "top_01"
               },
               "popupAttributes": {
-                "id": "popup_top_01"
+                "id": "popup_top_01",
+                "value": "top_01"
               }
             }),
             
@@ -58,12 +59,13 @@
                 "x": 0.56445,
                 "y": 0.6458
               },
-              "text": "Skirt",
+              "text": "Plaid Long Skirt",
               "buttonAttributes": {
                 "value": "skirt_01"
               },
               "popupAttributes": {
-                "id": "popup_skirt_01"
+                "id": "popup_skirt_01",
+                "value": "skirt_01"
               }
 
             }),
@@ -73,12 +75,13 @@
                 "x": 0.74805,
                 "y": 0.32705
               },
-              "text": "Bag",
+              "text": "Leather Shoulder Bag",
               "buttonAttributes": {
                 "value": "bag_01"
               },
               "popupAttributes": {
-                "id": "popup_bag_01"
+                "id": "popup_bag_01",
+                "value": "bag_01"
               }
 
             }),
@@ -88,12 +91,13 @@
                 "x": 0.64258,
                 "y": 0.11924
               },
-              "text": "Scarf",
+              "text": "Elegant Large Silk Scarf",
               "buttonAttributes": {
                 "value": "scarf_01"
               },
               "popupAttributes": {
-                "id": "popup_scarf_01"
+                "id": "popup_scarf_01",
+                "value": "scarf_01"
               }
 
             }),
@@ -111,6 +115,13 @@
         $(".taggd__popup").css("display", "none");
         $(popup_idx).css("display", "");
         // alert(idx);
+      });
+
+      $(".taggd__popup").unbind().on('click touchstart', function () {
+        var idx = "#" + $(this).attr('value');
+        $('html, body').animate({
+            scrollTop: $(idx).offset().top - 50
+        }, 1000);
       });
 
       $(".apparel").unbind().on('click touchstart', function () {

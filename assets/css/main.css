@@ -48,6 +48,9 @@ p {
   height: 2000px;
   width: 100%;
   background-color: white;
+  position: relative;
+  width: 100%;
+  padding-top: 50px;
 }
 
 

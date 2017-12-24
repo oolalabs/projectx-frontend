@@ -36,11 +36,11 @@ h6 {
 p {
   font-size: 18px;
   line-height: 1.5;
-  margin-bottom: 0px; }
+  margin-bottom: 20px; }
 
-section {
-  padding-bottom: 25px;
-}
+/*section {
+  padding: 100px 0; 
+}*/
 
 
 
@@ -48,9 +48,6 @@ section {
   height: 2000px;
   width: 100%;
   background-color: white;
-  position: relative;
-  width: 100%;
-  padding-top: 75px;
 }
 
 
@@ -110,7 +107,7 @@ header.masthead {
 
 .card-pro-pic{
   width: 100%;
-  margin-top: 0px;
+  margin-top: -50px;
 /*  width: 100px;
   height: auto;*/
 }
@@ -179,53 +176,4 @@ input[type=text]:focus {
 
 ::placeholder { /* Most modern browsers support this now. */
    color:    white;
-}
-
-
-/*.taggd-wrapper {
-    position: relative;
-}
-
-.taggd-wrapper .taggd-button {
-    background-color: transparent;
-    cursor: pointer;
-    border: 5px solid #bde0e1;
-    opacity: 0.2;
-}
-
-.taggd-wrapper .taggd-hover {
-    background-color: #000000;
-    cursor: default;
-    bottom: 320px;
-    left: 100px;
-    font-weight: lighter;
-    font-size: 40px;
-    color: #ffffff;
-    padding: 20px;
-}*/
-
-.taggd__button {
-  background-color: rgba(247, 162, 1, 0.5);
-  border-radius: 50%;
-}
-
-.taggd__popup {
-    display: block;
-    padding: .25rem;
-    position: absolute;
-    left: 50%;
-    top: 125%;
-    color: #fff;
-    text-align: center;
-    white-space: nowrap;
-    background-color: rgba(247, 162, 1, 0.5);
-    transform: translateX(-50%);
-}
-
-.star-rating{
-  font-size: 18px;
-}
-
-.checked {
-    color: orange;
 }
